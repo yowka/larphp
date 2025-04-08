@@ -1,0 +1,11 @@
+.wrapper{
+    width: 100%;
+    height: 70vh;
+    .back-logo{
+        width: 100%;
+        height: 270px;
+        opacity: 0.4;
+        background: url("../images/netflix-black.png") no-repeat center center;
+        background-size: contain;
+    }
+}

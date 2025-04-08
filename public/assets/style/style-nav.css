@@ -1,0 +1,25 @@
+nav{
+    height: 50px;
+    ul{
+        list-style: none;
+        display: flex;
+        li{
+            a{
+                font-size: 18px;
+                color: black;
+                text-decoration: none;
+            }
+        }
+        :nth-child(2){
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button{
+        height: 30px;
+    }
+}
+
