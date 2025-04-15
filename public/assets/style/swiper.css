@@ -1,0 +1,22 @@
+.swiper {
+    width: 70%;
+    height: 300px;
+}
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+    font-size: 24px;
+}
+.swiper-button-prev,
+.swiper-button-next {
+    color: firebrick;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.5);
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 24px;
+}
