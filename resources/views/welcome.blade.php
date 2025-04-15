@@ -9,6 +9,6 @@
     <title>Главная страница</title>
 </head>
 <body>
-@extends('nav-component')
+@include('nav-component')
 </body>
 </html>

@@ -8,10 +8,8 @@
     <link rel="icon" href="{{asset('assets/images/netflix.ico')}}">
     <title>Афиша</title>
 </head>
-<header>
-    @extends('nav-component')
-</header>
 <body>
+    @include('nav-component')
 
 </body>
 </html>

@@ -22,4 +22,13 @@ nav{
         height: 30px;
     }
 }
-
+.navigate-auth{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    a{
+        margin: 5px;
+        color: black;
+        text-decoration: none;
+    }
+}

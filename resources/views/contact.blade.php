@@ -10,9 +10,7 @@
     <title>Контакты</title>
 </head>
 <body>
-    <header>
-        @include('nav-component')
-    </header>
+@include('nav-component')
     <main>
         <div class="wrapper">
             <article>

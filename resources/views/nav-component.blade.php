@@ -8,6 +8,22 @@
             <li><a href="/poster">Афиша</a></li>
             <li><a href="/contact">Где нас найти?</a></li>
         </ul>
-        <button>Вход и регистрация</button>
+        <div class="navigate-auth">
+            @guest
+                <li><a href="{{ route('login') }}">Вход</a></li>
+                <li><a href="{{ route('register') }}">Регистрация</a></li>
+            @else
+                <li>
+                    Здравствуйте, {{ Auth::user()->name }}!
+                </li>
+                <li>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit">Выход</button>
+                    </form>
+                </li>
+            @endguest
+        </div>
+
     </nav>
 </header>
