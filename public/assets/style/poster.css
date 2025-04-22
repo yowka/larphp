@@ -1,0 +1,17 @@
+.wrapper{
+    .movie-card{
+        display: flex;
+        flex-direction: column;
+        border: solid 1px black;
+        padding: 5px;
+        border-radius: 20px;
+        img{
+            border-radius:20px ;
+        }
+    }
+    .movies-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+        gap: 80px; /* Расстояние между элементами */
+    }
+}

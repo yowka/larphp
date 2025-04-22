@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{asset('assets/style/swiper-bundle.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/style/about.css')}}">
     <link rel="stylesheet" href="{{asset('assets/style/swiper.css')}}">
     <link rel="icon" href="{{asset('assets/images/netflix.ico')}}">
     <title>О нас</title>
@@ -15,14 +16,20 @@
 @include('nav-component')
 <main>
     <div class="wrapper">
+        <h1>"Кино без границ — эмоции без предела!"</h1>
         <div class="back-logo">
             <div class="swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">Slide 1</div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
-                    <div class="swiper-slide">Slide 4</div>
-                    <div class="swiper-slide">Slide 5</div>
+                    @foreach($seances as $seance)
+                        <div class="swiper-slide">
+                            <div class="slide-image">
+                                <img src="{{ asset('/assets/images/resources/' . $seance->image) }}" alt="{{ $seance->title }}" >
+                            </div>
+                            <div class="slide-content">
+                                <p>{{$seance->title}}</p>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-prev"></div>
@@ -38,6 +45,7 @@
         new Swiper('.swiper', {
             direction: 'horizontal',
             loop: true,
+
             autoplay:{
                 delay: 2400,
                 disableOnInteraction: false,
@@ -52,14 +60,13 @@
                 prevEl: '.swiper-button-prev',
             },
 
-            scrollbar: {
-                el: '.swiper-scrollbar',
-                draggable: true,
+            slidesPerView: 3,
+            spaceBetween: 180,
+            breakpoints: {
+                320: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
             },
-
-            // Дополнительные параметры
-            slidesPerView: 1,
-            spaceBetween: 30,
             keyboard: {
                 enabled: true,
             },
